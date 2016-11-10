@@ -32,9 +32,9 @@ $ npm install vue-switch
 | 名称              | 类型               | 默认             | 说明                                         |
 | ----------------- | ----------------- | ---------------- | --------------------------------------------- |
 | value             | bollean         | true            | 要绑定的变量    |
-| open-name             | String            | "是"               | 激活时显示                   |
-| colose-name            | String            | '否'     | 关闭时显示                                    |
-| size           | String           | ""            | lg(显示两个汉字)              |
+| open-name             | String            | "是"               | 激活时显示文字                   |
+| colose-name            | String            | "否"     | 关闭时显示文字                                    |
+| size           | String           | ""            | 可选：lg(需要显示两个汉字时推荐)              |
 | color       | String            | "red"               | 颜色，可选：red/blue/orange/green                                     |
 
 
@@ -75,5 +75,6 @@ new Vue({
 		'switch': mySwitch
 	}
 });
+</script>
 
 ```
