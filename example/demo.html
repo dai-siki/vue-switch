@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style media="screen">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			padding: 50px;
+			font-family: '微软雅黑';
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.wrap{
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+
+<body>
+<div id="app">
+	<label for="myDate">你爱不爱我？</label>
+	<div class="wrap">
+		<switch :value.sync="toggle"></switch>
+	</div>
+	<div class="wrap">
+		<switch open-name="开" close-name="关" color="blue"
+			 :value.sync="toggle"></switch>
+	</div>
+	<div class="wrap">
+		<switch open-name="爱哦" close-name="不爱" size="lg" color="orange"
+			 :value.sync="toggle"></switch>
+	</div>
+	<div class="wrap">
+		<switch open-name="爱哦" close-name="不爱" size="lg" color="green"
+			 :value.sync="toggle"></switch>
+	</div>
+</div>
+
+<script src="demo-src.js"></script>
+</body>
+
+</html>

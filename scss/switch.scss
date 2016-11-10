@@ -1,0 +1,116 @@
+// 颜色
+$c1: #d0000e;
+$c2: #3091f2;
+$c3: #f60;
+$c4: #0c6;
+
+// 尺寸
+$md: 48px;
+$lg: 60px;
+
+.vue-switch {
+	position: relative;
+	display: inline-block;
+	width: 48px;
+	height: 22px;
+	line-height: 22px;
+	border-radius: 22px;
+	border: 1px solid #ccc;
+	background-color: #ccc;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	overflow: hidden;
+
+	span {
+		position: absolute;
+		font-size: 12px;
+		left: 25px;
+		color: #222;
+
+		&.open {
+			display: none;
+		}
+
+		&.close {
+			display: inline;
+		}
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		width: 18px;
+		height: 18px;
+		border-radius: 18px;
+		background-color: #fff;
+		left: 2px;
+		top: 2px;
+		cursor: pointer;
+		transition: left 0.2s ease-in-out,width 0.2s ease-in-out;
+	}
+
+	&:active {
+		&::after {
+			width: 24px;
+		}
+	}
+
+	&.z-on {
+		background-color: $c1;
+		border-color: $c1;
+
+		&.c-blue {
+			background-color: $c2;
+			border-color: $c2;
+		}
+
+		&.c-orange {
+			background-color: $c3;
+			border-color: $c3;
+		}
+
+		&.c-green {
+			background-color: $c4;
+			border-color: $c4;
+		}
+
+		span {
+			color: #fff;
+			left: 10px;
+
+			&.open {
+				display: inline;
+			}
+
+			&.close {
+				display: none;
+			}
+		}
+
+		&:active {
+			&::after {
+				left: 23px;
+			}
+		}
+
+		&::after {
+			left: 29px;
+		}
+	}
+
+	&.s-lg {
+		width: 60px;
+
+		&.z-on {
+			&:active {
+				&::after {
+					left: 35px;
+				}
+			}
+
+			&::after {
+				left: 41px;
+			}
+		}
+	}
+}
