@@ -1,23 +1,24 @@
 # vue-switch
 
-vue触发器组件（开关）
+a beautiful switch component for vue. (vue触发器组件)
 
 ## demo
 
-示例（vue@1.0+） [点我](http://dai-siki.github.io/vue-switch/example/demo.html).
+[click me](http://dai-siki.github.io/vue-switch/example/demo.html).
 
-## 截图
+## Screenshot
 
 ![screenshot](screenshot/01.png)
 ![screenshot](screenshot/02.png)
 
 
-## 依赖
+## Env
 
-基于 vue.js@1.0+ 版本。模块使用es6编写（需babel转译）。
+base vue.js@1.0+
+webpack + es6 + scss
 
 
-## 安装
+## install
 
 #### npm
 
@@ -25,7 +26,7 @@ vue触发器组件（开关）
 $ npm install vue-switch
 ```
 
-## 使用
+## Usage
 
 #### 相关参数
 
@@ -34,8 +35,8 @@ $ npm install vue-switch
 | value             | bollean         | true            | 要绑定的变量    |
 | open-name             | String            | "是"               | 激活时显示文字                   |
 | colose-name            | String            | "否"     | 关闭时显示文字                                    |
-| size           | String           | ""            | 可选：lg(需要显示两个汉字时推荐)              |
-| color       | String            | "red"               | 颜色，可选：red/blue/orange/green                                     |
+| size           | String           | "md"            | sm lg              |
+| color       | String            | "red"               | red/blue/orange/green                                     |
 
 
 #### 示例(vue@1.0+)
@@ -43,12 +44,24 @@ $ npm install vue-switch
 ```html
 
 <div id="app">
-	<label for="myDate">你爱不爱我？</label>
+	<label for="myDate">Do u love me ?</label>
+	<div class="wrap">
+		<switch size="sm" :value.sync="toggle"></switch>
+	</div>
+	<div class="wrap">
+		<switch size="sm" :value.sync="toggle" color="blue"></switch>
+	</div>
+	<div class="wrap">
+		<switch size="sm" :value.sync="toggle" color="orange"></switch>
+	</div>
+	<div class="wrap">
+		<switch size="sm" :value.sync="toggle" color="green"></switch>
+	</div>
 	<div class="wrap">
 		<switch :value.sync="toggle"></switch>
 	</div>
 	<div class="wrap">
-		<switch open-name="开" close-name="关" color="blue"
+		<switch open-name="Yes" close-name="No" color="blue"
 			 :value.sync="toggle"></switch>
 	</div>
 	<div class="wrap">
@@ -56,25 +69,25 @@ $ npm install vue-switch
 			 :value.sync="toggle"></switch>
 	</div>
 	<div class="wrap">
-		<switch open-name="爱哦" close-name="不爱" size="lg" color="green"
+		<switch open-name="Love" close-name="Hate" size="lg" color="green"
 			 :value.sync="toggle"></switch>
 	</div>
 </div>
 
 <script>
-import 'babel-polyfill'; //因为使用了es6的一些方法，需要babel垫片，如果你项目中已有相关兼容性方案，可忽略
-import Vue from 'vue';
-import mySwitch from 'vue-switch';
+	import 'babel-polyfill'; //因为使用了es6的一些方法，需要babel垫片，如果你项目中已有相关兼容性方案，可忽略
+	import Vue from 'vue';
+	import mySwitch from 'vue-switch';
 
-new Vue({
-	el: '#app',
-	data: {
-		toggle: true
-	},
-	components: {
-		'switch': mySwitch
-	}
-});
+	new Vue({
+		el: '#app',
+		data: {
+			toggle: true
+		},
+		components: {
+			'switch': mySwitch
+		}
+	});
 </script>
 
 ```

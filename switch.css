@@ -1,0 +1,114 @@
+.vue-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 22px;
+  line-height: 22px;
+  border-radius: 22px;
+  border: 1px solid #ccc;
+  background-color: #ccc;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden; }
+  .vue-switch span {
+    position: absolute;
+    font-size: 12px;
+    left: 25px;
+    color: #222; }
+    .vue-switch span.open {
+      display: none; }
+    .vue-switch span.close {
+      display: inline; }
+  .vue-switch::after {
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    background-color: #fff;
+    left: 2px;
+    top: 2px;
+    cursor: pointer;
+    -webkit-transition: left 0.2s ease-in-out, width 0.2s ease-in-out, background-color 0.1s ease-in-out;
+    transition: left 0.2s ease-in-out, width 0.2s ease-in-out, background-color 0.1s ease-in-out; }
+  .vue-switch:active::after {
+    width: 24px; }
+  .vue-switch.z-on {
+    background-color: #d0000e;
+    border-color: #d0000e; }
+    .vue-switch.z-on.c-blue {
+      background-color: #3091f2;
+      border-color: #3091f2; }
+    .vue-switch.z-on.c-orange {
+      background-color: #f60;
+      border-color: #f60; }
+    .vue-switch.z-on.c-green {
+      background-color: #0c6;
+      border-color: #0c6; }
+    .vue-switch.z-on span {
+      color: #fff;
+      left: 10px; }
+      .vue-switch.z-on span.open {
+        display: inline; }
+      .vue-switch.z-on span.close {
+        display: none; }
+    .vue-switch.z-on:active::after {
+      left: 23px; }
+    .vue-switch.z-on::after {
+      left: 29px; }
+  .vue-switch.s-lg {
+    width: 60px; }
+    .vue-switch.s-lg.z-on:active::after {
+      left: 35px; }
+    .vue-switch.s-lg.z-on::after {
+      left: 41px; }
+  .vue-switch.s-sm {
+    width: 38px;
+    height: 12px;
+    overflow: visible; }
+    .vue-switch.s-sm span {
+      display: none; }
+    .vue-switch.s-sm::after {
+      width: 20px;
+      height: 20px;
+      top: -4px;
+      left: -1px;
+      -webkit-box-shadow: 0 1px 3px 0 #aaa;
+              box-shadow: 0 1px 3px 0 #aaa; }
+    .vue-switch.s-sm:active::after {
+      width: 24px; }
+    .vue-switch.s-sm.z-on {
+      background-color: #ff9da4;
+      border-color: #ff9da4; }
+      .vue-switch.s-sm.z-on.c-blue {
+        background-color: #cae3fc;
+        border-color: #cae3fc; }
+        .vue-switch.s-sm.z-on.c-blue::after {
+          background-color: #3091f2;
+          -webkit-box-shadow: 0 1px 3px 0 #a8d1fa;
+                  box-shadow: 0 1px 3px 0 #a8d1fa; }
+      .vue-switch.s-sm.z-on.c-orange {
+        background-color: #ffc299;
+        border-color: #ffc299; }
+        .vue-switch.s-sm.z-on.c-orange::after {
+          background-color: #f60;
+          -webkit-box-shadow: 0 1px 3px 0 #ffb380;
+                  box-shadow: 0 1px 3px 0 #ffb380; }
+      .vue-switch.s-sm.z-on.c-green {
+        background-color: #b3ffd9;
+        border-color: #b3ffd9; }
+        .vue-switch.s-sm.z-on.c-green::after {
+          background-color: #0c6;
+          -webkit-box-shadow: 0 1px 3px 0 #66ffb3;
+                  box-shadow: 0 1px 3px 0 #66ffb3; }
+      .vue-switch.s-sm.z-on span {
+        display: none; }
+      .vue-switch.s-sm.z-on:active::after {
+        width: 24px;
+        left: 15px; }
+      .vue-switch.s-sm.z-on::after {
+        left: 19px;
+        background-color: #d0000e;
+        -webkit-box-shadow: 0 1px 3px 0 #ff7982;
+                box-shadow: 0 1px 3px 0 #ff7982; }

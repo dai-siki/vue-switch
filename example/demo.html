@@ -28,12 +28,24 @@
 
 <body>
 <div id="app">
-	<label for="myDate">你爱不爱我？</label>
+	<label for="myDate">Do u love me ?</label>
+	<div class="wrap">
+		<switch size="sm" :value.sync="toggle"></switch>
+	</div>
+	<div class="wrap">
+		<switch size="sm" :value.sync="toggle" color="blue"></switch>
+	</div>
+	<div class="wrap">
+		<switch size="sm" :value.sync="toggle" color="orange"></switch>
+	</div>
+	<div class="wrap">
+		<switch size="sm" :value.sync="toggle" color="green"></switch>
+	</div>
 	<div class="wrap">
 		<switch :value.sync="toggle"></switch>
 	</div>
 	<div class="wrap">
-		<switch open-name="开" close-name="关" color="blue"
+		<switch open-name="Yes" close-name="No" color="blue"
 			 :value.sync="toggle"></switch>
 	</div>
 	<div class="wrap">
@@ -41,7 +53,7 @@
 			 :value.sync="toggle"></switch>
 	</div>
 	<div class="wrap">
-		<switch open-name="爱哦" close-name="不爱" size="lg" color="green"
+		<switch open-name="Love" close-name="Hate" size="lg" color="green"
 			 :value.sync="toggle"></switch>
 	</div>
 </div>
