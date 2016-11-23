@@ -1,8 +1,9 @@
 <template>
-	<div :class="className" @click="onClick">
-		<span class="open">{{ openName }}</span>
-		<span class="close">{{ closeName }}</span>
-	</div>
+<div :class="className" @click="onClick">
+	<span class="open">{{ openName }}</span>
+	<span class="close">{{ closeName }}</span>
+</div>
+
 </template>
 
 <script>
@@ -37,10 +38,13 @@ export default {
 		closeName: {
 			type: String,
 			default: '否'
+		},
+		disabled: {
+			type: Boolean,
+			default: false
 		}
 	},
 	computed: {
-		//	日期二维数组（3*4），渲染用
 		className() {
 			let {
 				value,
@@ -58,17 +62,19 @@ export default {
 		}
 	},
 	methods: {
-		// 年份+月份选择
 		onClick() {
 			let {
+				disabled,
 				value,
 				openValue,
 				closeValue
 			} = this;
-			if (openValue === value) {
-				this.value = closeValue;
-			} else {
-				this.value = openValue;
+			if (!disabled) {
+				if (openValue === value) {
+					this.value = closeValue;
+				} else {
+					this.value = openValue;
+				}
 			}
 		}
 	}

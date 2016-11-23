@@ -32,11 +32,12 @@ $ npm install vue-switch
 
 | 名称              | 类型               | 默认             | 说明                                         |
 | ----------------- | ----------------- | ---------------- | --------------------------------------------- |
-| value             | bollean         | true            | 要绑定的变量    |
+| value             | Bollean         | true            | 要绑定的变量    |
 | open-name             | String            | "是"               | 激活时显示文字                   |
 | colose-name            | String            | "否"     | 关闭时显示文字                                    |
 | size           | String           | "md"            | sm lg              |
 | color       | String            | "red"               | red/blue/orange/green                                     |
+| disabled       | Bollean            | false               | as u know                                    |
 
 
 #### 示例(vue@1.0+)
@@ -49,7 +50,7 @@ $ npm install vue-switch
 		<switch size="sm" :value.sync="toggle"></switch>
 	</div>
 	<div class="wrap">
-		<switch size="sm" :value.sync="toggle" color="blue"></switch>
+		<switch size="sm" :value.sync="toggle" color="blue" :disabled="true"></switch>
 	</div>
 	<div class="wrap">
 		<switch size="sm" :value.sync="toggle" color="orange"></switch>
