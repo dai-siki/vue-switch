@@ -13,12 +13,12 @@ $lg: 60px;
 	display: inline-block;
 	width: 48px;
 	height: 20px;
-	line-height: 19px;
+	line-height: 20px;
 	border-radius: 20px;
 	border: 1px solid #ccc;
 	background-color: #ccc;
 	cursor: pointer;
-	transition: all 0.2s ease-in-out;
+	transition: all 0.15s ease;
 	overflow: hidden;
 
 	span {
@@ -46,7 +46,7 @@ $lg: 60px;
 		left: 2px;
 		top: 2px;
 		cursor: pointer;
-		transition: left 0.15s ease-in-out, width 0.15s ease-in-out, background-color 0.1s ease-in-out;
+		transition: left 0.15s ease, width 0.15s ease, background-color 0.1s ease;
 	}
 
 	&:active {

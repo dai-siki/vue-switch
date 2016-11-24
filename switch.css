@@ -3,13 +3,13 @@
   display: inline-block;
   width: 48px;
   height: 20px;
-  line-height: 19px;
+  line-height: 20px;
   border-radius: 20px;
   border: 1px solid #ccc;
   background-color: #ccc;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
   overflow: hidden; }
   .vue-switch span {
     position: absolute;
@@ -30,8 +30,8 @@
     left: 2px;
     top: 2px;
     cursor: pointer;
-    -webkit-transition: left 0.15s ease-in-out, width 0.15s ease-in-out, background-color 0.1s ease-in-out;
-    transition: left 0.15s ease-in-out, width 0.15s ease-in-out, background-color 0.1s ease-in-out; }
+    -webkit-transition: left 0.15s ease, width 0.15s ease, background-color 0.1s ease;
+    transition: left 0.15s ease, width 0.15s ease, background-color 0.1s ease; }
   .vue-switch:active::after {
     width: 24px; }
   .vue-switch.z-on {
