@@ -18,7 +18,7 @@ $lg: 60px;
 	border: 1px solid #ccc;
 	background-color: #ccc;
 	cursor: pointer;
-	transition: all 0.15s ease;
+	transition: all 0.21s ease;
 	overflow: hidden;
 
 	span {
@@ -46,7 +46,7 @@ $lg: 60px;
 		left: 2px;
 		top: 2px;
 		cursor: pointer;
-		transition: left 0.15s ease, width 0.15s ease, background-color 0.1s ease;
+		transition: left 0.21s ease, width 0.21s ease, background-color 0.1s ease;
 	}
 
 	&:active {
