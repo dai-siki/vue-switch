@@ -51,11 +51,13 @@ export default {
 				openValue,
 				closeValue,
 				size,
-				color
+				color,
+				disabled
 			} = this;
 			return {
 				'vue-switch': true,
 				'z-on': value === openValue,
+				'z-disabled': disabled,
 				['s-' + size]: true,
 				['c-' + color]: true
 			};

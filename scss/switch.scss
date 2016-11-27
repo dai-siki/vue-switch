@@ -15,11 +15,15 @@ $lg: 60px;
 	height: 20px;
 	line-height: 20px;
 	border-radius: 20px;
-	border: 1px solid #ccc;
-	background-color: #ccc;
+	border: 1px solid #d5d5d5;
+	background-color: #d5d5d5;
 	cursor: pointer;
 	transition: all 0.21s ease;
+	user-select: none;
 	overflow: hidden;
+	-webkit-appearance:none;
+	-webkit-tap-highlight-color: transparent;
+	transform: rotate(0deg);
 
 	span {
 		position: absolute;
@@ -46,12 +50,12 @@ $lg: 60px;
 		left: 2px;
 		top: 2px;
 		cursor: pointer;
-		transition: left 0.21s ease, width 0.21s ease, background-color 0.1s ease;
+		transition: left 0.23s ease, width 0.23s ease, background-color 0.15s ease;
 	}
 
 	&:active {
 		&::after {
-			width: 24px;
+			width: 20px;
 		}
 	}
 
@@ -89,7 +93,7 @@ $lg: 60px;
 
 		&:active {
 			&::after {
-				left: 23px;
+				left: 25px;
 			}
 		}
 
@@ -104,7 +108,7 @@ $lg: 60px;
 		&.z-on {
 			&:active {
 				&::after {
-					left: 35px;
+					left: 37px;
 				}
 			}
 
@@ -115,8 +119,8 @@ $lg: 60px;
 	}
 
 	&.s-sm {
-		width: 38px;
-		height: 12px;
+		width: 36px;
+		height: 10px;
 		overflow: visible;
 
 		span {
@@ -124,16 +128,16 @@ $lg: 60px;
 		}
 
 		&::after {
-			width: 20px;
-			height: 20px;
+			width: 18px;
+			height: 18px;
 			top: -4px;
 			left: -1px;
-			box-shadow: 0 1px 3px 0 #aaa;
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.17);
 		}
 
 		&:active {
 			&::after {
-				width: 24px;
+				width: 21px;
 			}
 		}
 
@@ -147,7 +151,6 @@ $lg: 60px;
 
 				&::after {
 					background-color: $c2;
-					box-shadow: 0 1px 3px 0 lighten($c2, 25);
 				}
 			}
 
@@ -157,7 +160,6 @@ $lg: 60px;
 
 				&::after {
 					background-color: $c3;
-					box-shadow: 0 1px 3px 0 lighten($c3, 25);
 				}
 			}
 
@@ -167,7 +169,6 @@ $lg: 60px;
 
 				&::after {
 					background-color: $c4;
-					box-shadow: 0 1px 3px 0 lighten($c4, 30);
 				}
 			}
 
@@ -177,7 +178,6 @@ $lg: 60px;
 
 			&:active {
 				&::after {
-					width: 24px;
 					left: 15px;
 				}
 			}
@@ -185,9 +185,23 @@ $lg: 60px;
 			&::after {
 				left: 19px;
 				background-color: $c1;
-				box-shadow: 0 1px 3px 0 lighten($c1, 40);
 			}
 
+			&.z-disabled {
+				&::after {
+					box-shadow: none;
+				}
+			}
+		}
+
+		&.z-disabled {
+			background-color: #e5e5e5;
+			border-color: #e5e5e5;
+
+			&::after {
+				background-color: #d5d5d5;
+				box-shadow: none;
+			}
 		}
 	}
 }

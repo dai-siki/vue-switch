@@ -6,16 +6,10 @@ a beautiful switch component for vue. (vue触发器组件)
 
 [click me](http://dai-siki.github.io/vue-switch/example/demo.html).
 
-## Screenshot
-
-![screenshot](screenshot/01.png)
-![screenshot](screenshot/02.png)
-
 
 ## Env
 
-base vue.js@1.0+
-webpack + es6 + scss
+vue.js@1.0 + webpack + es6 + scss
 
 
 ## install

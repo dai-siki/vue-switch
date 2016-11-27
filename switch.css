@@ -5,12 +5,21 @@
   height: 20px;
   line-height: 20px;
   border-radius: 20px;
-  border: 1px solid #ccc;
-  background-color: #ccc;
+  border: 1px solid #d5d5d5;
+  background-color: #d5d5d5;
   cursor: pointer;
   -webkit-transition: all 0.21s ease;
   transition: all 0.21s ease;
-  overflow: hidden; }
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg); }
   .vue-switch span {
     position: absolute;
     font-size: 12px;
@@ -30,10 +39,10 @@
     left: 2px;
     top: 2px;
     cursor: pointer;
-    -webkit-transition: left 0.21s ease, width 0.21s ease, background-color 0.1s ease;
-    transition: left 0.21s ease, width 0.21s ease, background-color 0.1s ease; }
+    -webkit-transition: left 0.23s ease, width 0.23s ease, background-color 0.15s ease;
+    transition: left 0.23s ease, width 0.23s ease, background-color 0.15s ease; }
   .vue-switch:active::after {
-    width: 24px; }
+    width: 20px; }
   .vue-switch.z-on {
     background-color: #d33;
     border-color: #d33; }
@@ -54,30 +63,30 @@
       .vue-switch.z-on span.close {
         display: none; }
     .vue-switch.z-on:active::after {
-      left: 23px; }
+      left: 25px; }
     .vue-switch.z-on::after {
       left: 29px; }
   .vue-switch.s-lg {
     width: 60px; }
     .vue-switch.s-lg.z-on:active::after {
-      left: 35px; }
+      left: 37px; }
     .vue-switch.s-lg.z-on::after {
       left: 41px; }
   .vue-switch.s-sm {
-    width: 38px;
-    height: 12px;
+    width: 36px;
+    height: 10px;
     overflow: visible; }
     .vue-switch.s-sm span {
       display: none; }
     .vue-switch.s-sm::after {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       top: -4px;
       left: -1px;
-      -webkit-box-shadow: 0 1px 3px 0 #aaa;
-              box-shadow: 0 1px 3px 0 #aaa; }
+      -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.17);
+              box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.17); }
     .vue-switch.s-sm:active::after {
-      width: 24px; }
+      width: 21px; }
     .vue-switch.s-sm.z-on {
       background-color: #fae2e2;
       border-color: #fae2e2; }
@@ -85,30 +94,31 @@
         background-color: #cae3fc;
         border-color: #cae3fc; }
         .vue-switch.s-sm.z-on.c-blue::after {
-          background-color: #3091f2;
-          -webkit-box-shadow: 0 1px 3px 0 #a8d1fa;
-                  box-shadow: 0 1px 3px 0 #a8d1fa; }
+          background-color: #3091f2; }
       .vue-switch.s-sm.z-on.c-orange {
         background-color: #ffc299;
         border-color: #ffc299; }
         .vue-switch.s-sm.z-on.c-orange::after {
-          background-color: #f60;
-          -webkit-box-shadow: 0 1px 3px 0 #ffb380;
-                  box-shadow: 0 1px 3px 0 #ffb380; }
+          background-color: #f60; }
       .vue-switch.s-sm.z-on.c-green {
         background-color: #b3ffd9;
         border-color: #b3ffd9; }
         .vue-switch.s-sm.z-on.c-green::after {
-          background-color: #0c6;
-          -webkit-box-shadow: 0 1px 3px 0 #66ffb3;
-                  box-shadow: 0 1px 3px 0 #66ffb3; }
+          background-color: #0c6; }
       .vue-switch.s-sm.z-on span {
         display: none; }
       .vue-switch.s-sm.z-on:active::after {
-        width: 24px;
         left: 15px; }
       .vue-switch.s-sm.z-on::after {
         left: 19px;
-        background-color: #d33;
-        -webkit-box-shadow: 0 1px 3px 0 #fae2e2;
-                box-shadow: 0 1px 3px 0 #fae2e2; }
+        background-color: #d33; }
+      .vue-switch.s-sm.z-on.z-disabled::after {
+        -webkit-box-shadow: none;
+                box-shadow: none; }
+    .vue-switch.s-sm.z-disabled {
+      background-color: #e5e5e5;
+      border-color: #e5e5e5; }
+      .vue-switch.s-sm.z-disabled::after {
+        background-color: #d5d5d5;
+        -webkit-box-shadow: none;
+                box-shadow: none; }
