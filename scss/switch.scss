@@ -43,19 +43,19 @@ $lg: 60px;
 	&::after {
 		position: absolute;
 		content: '';
-		width: 16px;
-		height: 16px;
-		border-radius: 16px;
+		width: 18px;
+		height: 18px;
+		border-radius: 18px;
 		background-color: #fff;
-		left: 2px;
-		top: 2px;
+		left: 1px;
+		top: 1px;
 		cursor: pointer;
-		transition: left 0.23s ease, width 0.23s ease, background-color 0.15s ease;
+		transition: left 0.23s ease, width 0.23s ease, background-color 0.23s ease;
 	}
 
 	&:active {
 		&::after {
-			width: 20px;
+			width: 22px;
 		}
 	}
 
@@ -197,10 +197,12 @@ $lg: 60px;
 		&.z-disabled {
 			background-color: #e5e5e5;
 			border-color: #e5e5e5;
+		    cursor: not-allowed;
 
 			&::after {
 				background-color: #d5d5d5;
 				box-shadow: none;
+				cursor: not-allowed;
 			}
 		}
 	}
