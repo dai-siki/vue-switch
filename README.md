@@ -26,9 +26,11 @@ $ npm install vue-switch
 
 | 名称              | 类型               | 默认             | 说明                                         |
 | ----------------- | ----------------- | ---------------- | --------------------------------------------- |
-| value             | Bollean         | true            | 要绑定的变量    |
+| value             | twoWay            |                  | 要绑定的变量    |
+| open-value             |             | true               | 激活时绑定值                   |
+| close-value            |             | false     | 关闭时绑定值                                    |
 | open-name             | String            | "是"               | 激活时显示文字                   |
-| colose-name            | String            | "否"     | 关闭时显示文字                                    |
+| close-name            | String            | "否"     | 关闭时显示文字                                    |
 | size           | String           | "md"            | sm lg              |
 | color       | String            | "red"               | red/blue/orange/green                                     |
 | disabled       | Bollean            | false               | as u know                                    |
