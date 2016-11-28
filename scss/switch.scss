@@ -21,7 +21,7 @@ $lg: 60px;
 	transition: all 0.21s ease;
 	user-select: none;
 	overflow: hidden;
-	-webkit-appearance:none;
+	-webkit-appearance: none;
 	-webkit-tap-highlight-color: transparent;
 	transform: rotate(0deg);
 
@@ -141,6 +141,18 @@ $lg: 60px;
 			}
 		}
 
+		&.z-disabled {
+			background-color: #e5e5e5;
+			border-color: #e5e5e5;
+			cursor: not-allowed;
+
+			&::after {
+				background-color: #d5d5d5;
+				box-shadow: none;
+				cursor: not-allowed;
+			}
+		}
+
 		&.z-on {
 			background-color: lighten($c1, 40);
 			border-color: lighten($c1, 40);
@@ -191,18 +203,6 @@ $lg: 60px;
 				&::after {
 					box-shadow: none;
 				}
-			}
-		}
-
-		&.z-disabled {
-			background-color: #e5e5e5;
-			border-color: #e5e5e5;
-		    cursor: not-allowed;
-
-			&::after {
-				background-color: #d5d5d5;
-				box-shadow: none;
-				cursor: not-allowed;
 			}
 		}
 	}
