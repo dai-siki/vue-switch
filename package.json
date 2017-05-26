@@ -1,6 +1,6 @@
 {
   "name": "vue-switch",
-  "version": "1.2.5",
+  "version": "1.3.0",
   "description": "a beautiful switch component for vue",
   "main": "switch.vue",
   "scripts": {

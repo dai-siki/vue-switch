@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+	<style media="screen">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			padding: 50px;
+			font-family: '微软雅黑';
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		.wrap{
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+
+<body>
+<div id="app">
+	<label for="myDate">Do u love me ?</label>
+	<div class="wrap">
+		<my-switch size="sm" v-model="toggle"></my-switch>
+	</div>
+	<div class="wrap">
+		<my-switch size="sm" v-model="toggle" color="blue" :disabled="true"></my-switch>
+	</div>
+	<div class="wrap">
+		<my-switch size="sm" v-model="toggle" color="orange"></my-switch>
+	</div>
+	<div class="wrap">
+		<my-switch size="sm" v-model="toggle" color="green"></my-switch>
+	</div>
+	<div class="wrap">
+		<my-switch v-model="toggle"></my-switch>
+	</div>
+	<div class="wrap">
+		<my-switch open-name="Yes" close-name="No" color="blue"
+			 v-model="toggle"></my-switch>
+	</div>
+	<div class="wrap">
+		<my-switch open-name="爱哦" close-name="不爱" size="lg" color="orange"
+			 v-model="toggle"></my-switch>
+	</div>
+	<div class="wrap">
+		<my-switch open-name="Love" close-name="Hate" size="lg" color="green"
+			 v-model="toggle"></my-switch>
+	</div>
+</div>
+
+<script src="vue.js"></script>
+<script src="demo-src.js"></script>
+</body>
+
+</html>

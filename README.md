@@ -9,7 +9,7 @@ a beautiful switch component for vue. (vue触发器组件)
 
 ## Env
 
-vue.js@1.0 + webpack + es6 + scss
+vue.js + webpack + es6 + scss
 
 
 ## install
@@ -83,6 +83,35 @@ $ npm install vue-switch
 		},
 		components: {
 			'switch': mySwitch
+		}
+	});
+</script>
+
+```
+
+#### 示例(vue@2.0+)
+
+```html
+
+<div id="app">
+	<label for="myDate">Do u love me ?</label>
+	<div class="wrap">
+		<my-switch size="sm" v-model="toggle"></my-switch>
+	</div>
+</div>
+
+<script>
+	import 'babel-polyfill'; //因为使用了es6的一些方法，需要babel垫片，如果你项目中已有相关兼容性方案，可忽略
+	import Vue from 'vue';
+	import mySwitch from 'vue-switch/switch-2.vue';
+
+	new Vue({
+		el: '#app',
+		data: {
+			toggle: true
+		},
+		components: {
+			'my-switch': mySwitch
 		}
 	});
 </script>
